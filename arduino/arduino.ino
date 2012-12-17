@@ -42,7 +42,7 @@
 // NEMA17 are rated up to 3000RPM.  Adafruit can handle >1000RPM.
 // These numbers directly affect the maximum velocity.
 #define STEPS_PER_TURN  (200.0)
-#define MAX_RPM         (2000.0)
+#define MAX_RPM         (250.0)
 
 // delay between steps, in microseconds.
 #define STEP_DELAY      (5200)  // = 3.5ms
@@ -114,7 +114,7 @@ int M2_REEL_IN  = FORWARD;
 int M2_REEL_OUT = BACKWARD;
 
 // calculate some numbers to help us find feed_rate
-float SPOOL_DIAMETER = 0.950;
+float SPOOL_DIAMETER = 3.00;
 float SPOOL_CIRC     = SPOOL_DIAMETER*PI;  // circumference
 float THREADPERSTEP  = SPOOL_CIRC/STEPS_PER_TURN;  // thread per step
 float MAX_VEL        = MAX_STEPS_S * THREADPERSTEP;  // cm/s
